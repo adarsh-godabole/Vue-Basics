@@ -1,24 +1,17 @@
 <template>
-  <div v-bind:class="{
-   danger : status
-  }">
-    Hello {{name}}
-  </div>
+  <Greet>
+  </Greet>
 </template>
 
 <script>
-
+import Greet from './components/Greet.vue'
 
 export default {
   name: 'App',
-  data() {
-    return{
-      name:"Adarash",
-      status:true
-    };
+  components:{Greet}
   }
   
-}
+
 </script>
 
 <style>
