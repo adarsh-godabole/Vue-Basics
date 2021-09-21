@@ -3,7 +3,9 @@
     <!-- <Greet Uname="AAA" color="red"/>
     <Greet Uname="VVV" color="blue"/>
      <Greet :Uname="name" color="green"/> -->
-     <Article title="FCB" :likes="1000" :isQualified="false"/>
+     <!-- <Article id="my-article" title="FCB" :likes="1000" :isQualified="false"/> -->
+     <button @click="visible=true">POP-UP</button>
+     <popup v-show="visible" @close="close"/>
   </div>
 
 
@@ -11,18 +13,26 @@
 
 <script>
 // import Greet from './components/Greet.vue'
-import Article from './components/Article.vue'
+// import Article from './components/Article.vue'
+import  popup  from "./components/popup.vue";
 
 
 export default {
   name: 'App',
-  components:{Article},
+  components:{popup},
   data(){
     return{
-    name:"Adarsh"
+      visible:false
+    }
+  },
+  methods:{
+    close(name){
+      this.visible=false;
+      console.log(name);
     }
   }
-  }
+}
+  
   
 
 </script>

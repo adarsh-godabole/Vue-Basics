@@ -7,7 +7,8 @@ Hello {{Uname}} your color is {{color}}
 <script>
     export default {
         name:"Greet",
-        props:['Uname','color']
+        props:['Uname','color'],
+        
     }
 </script>
 

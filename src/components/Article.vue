@@ -1,9 +1,10 @@
 <template>
     <div>
 Article Component
-<h2>{{title}}</h2>
+<h2 v-bind="$attrs">{{title}}</h2>
 <h2>{{likes}}</h2>
 <h2>{{isQualified?'Yes':'No'}}</h2>
+<h1>My name is {{username}}</h1>
 
     </div>
 </template>
@@ -18,7 +19,9 @@ Article Component
             },
             likes:Number,
             isQualified:Boolean
-        }
+        },
+        inheritAttrs:false,
+        inject:["username"]
         
     }
 </script>
