@@ -1,14 +1,27 @@
 <template>
-  <Greet>
-  </Greet>
+  <div>
+    <!-- <Greet Uname="AAA" color="red"/>
+    <Greet Uname="VVV" color="blue"/>
+     <Greet :Uname="name" color="green"/> -->
+     <Article title="FCB" :likes="1000" :isQualified="false"/>
+  </div>
+
+
 </template>
 
 <script>
-import Greet from './components/Greet.vue'
+// import Greet from './components/Greet.vue'
+import Article from './components/Article.vue'
+
 
 export default {
   name: 'App',
-  components:{Greet}
+  components:{Article},
+  data(){
+    return{
+    name:"Adarsh"
+    }
+  }
   }
   
 

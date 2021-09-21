@@ -1,9 +1,16 @@
 <template>
-    <h2>Hello Adarsh</h2>
+    <div>
+Hello {{Uname}} your color is {{color}}
+    </div>
 </template>
 
 <script>
-export default {
-    name:'Greet'
-}
+    export default {
+        name:"Greet",
+        props:['Uname','color']
+    }
 </script>
+
+<style scoped>
+
+</style>
